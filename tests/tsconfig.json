@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  /* two disconnected sub project to refer to already built source folder in our test folder without compiling everthing all together */
+  "references": [
+    {
+      "name": "my-lib",
+      "path": ".."
+    }
+  ],
+  "compilerOptions": {
+    "types": ["jest"],
+    "rootDir": "..",
+    "noEmit": true /* safe to use here cause jest doesnt need it*/
+  },
+  "include": ["."]
+}
